@@ -4,7 +4,7 @@ import getpass
 from colorama import Fore, Back, Style, init
 from dotenv import load_dotenv
 from banners import print_intro, print_logo, print_login
-from function import smdc, get_current_time, send
+from function.send.disget import smdc, get_current_time, send
 
 # เริ่มต้นการใช้งาน colorama
 init(autoreset=True)
