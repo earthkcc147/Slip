@@ -5,8 +5,17 @@ from function import create_fake_receipt
 from function.send.discord import send_to_discord
 from function import print_intro
 
+def clear_console():
+    # ตรวจสอบว่ากำลังทำงานในระบบปฏิบัติการใด
+    if os.name == 'nt':  # Windows
+        os.system('cls')
+    else:  # Linux หรือ macOS หรือ Termux
+        os.system('clear')
+
 
 print_intro()
+input(Fore.GREEN + "\nกด Enter เพื่อดำเนินการต่อ...")
+clear_console()
 
 # เรียกใช้ฟังก์ชัน login ก่อนการสร้างสลีปปลอม
 if login():
