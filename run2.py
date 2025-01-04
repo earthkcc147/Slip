@@ -1,9 +1,13 @@
 # main.py
 import os
+from colorama import init, Fore, Style
 from function import login
 from function import create_fake_receipt
 from function.send.discord import send_to_discord
 from banners import print_intro
+
+# เริ่มต้นการใช้งาน colorama
+init(autoreset=True)
 
 def clear_console():
     # ตรวจสอบว่ากำลังทำงานในระบบปฏิบัติการใด
