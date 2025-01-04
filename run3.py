@@ -1,7 +1,7 @@
 import os
 from function import login
 from function import create_fake_receipt
-from function.send.discord import send_to_discord_user  # เปลี่ยนเป็นฟังก์ชันใหม่
+from function.send.discord_id import send_to_discord_user  # เปลี่ยนเป็นฟังก์ชันใหม่
 
 # เรียกใช้ฟังก์ชัน login ก่อนการสร้างสลีปปลอม
 if login():
