@@ -14,6 +14,7 @@ def create_fake_receipt(name_user_id, name_me_id, phone_me_id, money_id):
     year = current_time_thailand.strftime("%Y")
 
     # โหลดภาพพื้นหลัง
+    print("🖼️ กำลังโหลดภาพพื้นหลัง... ⏳")
     image = Image.open(os.path.join(os.path.dirname(__file__), "truemoney.png"))  # โหลดภาพจากโฟลเดอร์เดียวกัน
     draw = ImageDraw.Draw(image)
 
@@ -71,8 +72,10 @@ def create_fake_receipt(name_user_id, name_me_id, phone_me_id, money_id):
     # ตรวจสอบว่าโฟลเดอร์ "textnew" มีอยู่หรือไม่ ถ้าไม่มีให้สร้าง
     folder_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), "..", "textnew")
     if not os.path.exists(folder_path):
+        print("📂 โฟลเดอร์ textnew ไม่พบ, กำลังสร้าง...")
         os.makedirs(folder_path)
 
     # บันทึกภาพที่มีข้อความในโฟลเดอร์ "textnew"
+    print("💾 กำลังบันทึกไฟล์... 📸")
     image.save(os.path.join(folder_path, "truemoney_with_textnew.png"))
-    print("สลีปปลอมสำเร็จ! บันทึกเป็น textnew/truemoney_with_textnew.png")
+    print("✅ สลีปปลอมสำเร็จ! บันทึกเป็น textnew/truemoney_with_textnew.png")
