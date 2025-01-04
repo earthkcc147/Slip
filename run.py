@@ -2,7 +2,7 @@ import os
 from colorama import init, Fore, Style
 from function import login
 from function import create_fake_receipt
-from function.send.discord2 import send_to_discord
+from function.send.discord3 import send_to_discord
 from banners import print_intro
 from function.input import get_user_input  # นำเข้าฟังก์ชันจาก input.py
 
