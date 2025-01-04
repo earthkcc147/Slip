@@ -69,7 +69,7 @@ def create_fake_receipt(name_user_id, name_me_id, phone_me_id, money_id):
     draw.text(text_position_order, text_name_order, font=font_order, fill=text_color_order)
 
     # ตรวจสอบว่าโฟลเดอร์ "textnew" มีอยู่หรือไม่ ถ้าไม่มีให้สร้าง
-    folder_path = os.path.join(os.path.dirname(__file__), "textnew")
+    folder_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), "..", "textnew")
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
 
