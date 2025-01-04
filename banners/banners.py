@@ -8,6 +8,14 @@ from colorama import init, Fore, Style
 init()
 
 
+def clear_console():
+    # ตรวจสอบว่ากำลังทำงานในระบบปฏิบัติการใด
+    if os.name == 'nt':  # Windows
+        os.system('cls')
+    else:  # Linux หรือ macOS หรือ Termux
+        os.system('clear')
+
+
 
 # ฟังก์ชันสำหรับจัดข้อความให้อยู่ตรงกลาง
 def center_text(text):
@@ -32,6 +40,7 @@ intro = pyfiglet.figlet_format("Welcome\nTo\nGumarun Store", font="cybermedium",
 
 # ฟังก์ชันแสดงข้อความพร้อมดีเลย์
 def print_intro():
+    clear_console()
     # ใช้ center_text เพื่อจัดข้อความให้อยู่ตรงกลาง
     centered_intro = center_text(intro)
     for line in centered_intro.splitlines():
