@@ -29,7 +29,7 @@ if login():
 
     # เริ่มจากสร้างชื่อไฟล์ใหม่ตามที่ต้องการ
     image_filename = f"{name_user_id}_{name_me_id}_{money_id}_{phone_me_id}.png"
-    image_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), "..", "textnew", image_filename)
+    image_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "textnew", image_filename))
 
     # เรียกใช้ฟังก์ชันเพื่อส่งไปยัง Discord
     send_to_discord(image_path, f"สลีปปลอมของ {name_user_id} ถูกสร้างเรียบร้อยแล้ว!")
