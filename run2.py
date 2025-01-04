@@ -3,7 +3,7 @@ import os
 from function import login
 from function import create_fake_receipt
 from function.send.discord import send_to_discord
-from function import print_intro
+from banners import print_intro
 
 def clear_console():
     # ตรวจสอบว่ากำลังทำงานในระบบปฏิบัติการใด
