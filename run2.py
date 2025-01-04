@@ -1,4 +1,5 @@
 # main.py
+import os
 from function import login
 from function import create_fake_receipt
 from function.send.discord import send_to_discord  # เพิ่มการนำเข้าฟังก์ชัน send_to_discord
